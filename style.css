@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Teko:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-font:'Teko', sans-serif;
+    --secondary-font:'Roboto', sans-serif;
+    --primary-color:#ffd000;
+}
+
+/* utility class */
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+}
+.align-items{
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+.space-between{
+    justify-content: space-between;
+}
+input[type='checkbox']{
+    display: none;
+}
+
+/* utility class */
+
+body{
+    background-image: url('./images/jumanji.jpg') ;
+    /* background-image: url('./images/batman.jpg') ; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transition: background-image 1s ease-in-out;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    isolation: isolate;
+    padding-bottom: 4rem;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+/* ============================== navbar ============================== */
+
+.navbar{
+    padding: .8rem 0;
+}
+.navbar .logo{
+    flex-direction: column;
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.navbar .logo span{
+    font-size: .5rem;
+    font-family: var(--secondary-font);
+    margin-top: -12px;
+    font-weight: 300;
+    margin-left: 5px;
+    color: white;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+.navbar ul li{
+    margin: 0 1.2rem;
+    font-family: var(--secondary-font);
+    font-size: .8rem;
+    font-weight: 400;    
+    position: relative;
+    cursor: pointer;
+}
+.navbar ul li.click::after,
+.navbar ul li:hover::after{
+    content: '';
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+.navbar .admin .headerInput input{
+    padding: .5rem 1rem;
+    background: rgba(0, 0, 0, .5);
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    width: 200px;
+    border-radius: 20px;
+    font-family: var(--secondary-font);
+    font-size: .8rem;
+    color: white;
+}
+.navbar .admin .headerInput{
+    position: relative;
+}
+.navbar .admin .headerInput input::placeholder{
+    color: rgba(255, 255, 255, 0.9);
+}
+.navbar .admin .headerInput i{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.76);
+    transform: translateY(-50%);
+    font-size: .8rem;
+}
+.navbar .admin > i{
+    font-size: 1.75rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.navbar .admin > i:hover{
+    color: var(--primary-color);
+}
+
+/* ============================== navbar ============================== */
+
+/* ============================== hero-section ============================== */
+
+.hero-section{
+    height: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section .movieTitle{
+    font-family: var(--primary-font);
+    font-size: 4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 13px;
+}
+.hero-section .movieTitle::before{
+    content: '';
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    left: -12px;
+    width: 5px;
+    height: 55%;
+    background-color: var(--primary-color);
+}
+.detail{
+    margin: -.5rem 0 1rem;
+}
+.detail p{
+    font-size: .6rem;
+    margin-right: 1rem;
+    font-family: var(--secondary-font);
+}
+.detail p i{
+    margin-right: .4rem;
+}
+.detail p i.star{
+    color: yellow;
+}
+.hero-section .description{
+    font-size: .8rem;
+    font-family: var(--secondary-font);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    font-weight: 300;
+    max-width: 500px;
+    margin: 1.8rem 0 1rem;
+}
+.hero-section .btns .trailer_btn{
+    padding: .6rem 2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-family: var(--secondary-font);
+    font-size: .8rem;
+    cursor: pointer;
+    color: white;
+    transition: background-color .5s ease-in-out;
+}
+.hero-section .btns .trailer_btn i{
+    margin-left: .5rem;
+    font-size: .6rem;
+    color: var(--primary-color);
+}
+.hero-section .btns .trailer_btn:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.hero-section .btns .trailer_btn:hover i{
+    color: white;
+}
+.hero-section > p{
+    color: white;
+    font-size: .6rem;
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    position: absolute;
+    top: 35%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    right: 0;
+    transform: rotate(90deg);
+}
+.hero-section > p i{
+    font-size: .8rem;
+    /* color: white !important; */
+    color: white ;
+    margin: 0 .5rem 0 2rem;
+    color: var(--primary-color);
+}
+.hero-section > p:hover i{
+    color: var(--primary-color) !important;
+}
+
+/* ============================== hero-section ============================== */
+
+/* .card-section .container{
+    height: 100%;
+} */
+.card-section{
+    width: 100%;
+    margin-top: 1rem;
+    /* position: absolute;
+    top: 0; */
+    /* height: 100vh; */
+}
+.cards{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+.cards i{
+    color: white;
+    font-size: 1.5rem;
+}
+.card{
+    width:  180px;
+    height: 150px;
+    /* margin: auto; */
+    /* flex-basis: 100%; */
+    border-radius: 10px;
+    position: relative;
+    transition: transform .8s ease-in-out;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    isolation: isolate;
+}
+.img::before{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    /* top: 0;
+    left: 0; */
+    inset: 0;
+    border-radius: 5px 5px 0 0;
+}
+img{
+    object-fit: cover;
+    /* object-position: center; */
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height:100% ;
+}
+.card .card-body{
+    position: absolute;
+    width: 100%;
+    padding: 0 .5rem ;
+    /* left: 10px; */
+    bottom: 1px;
+    z-index: 3;
+}
+.card .card-body .title{
+    font-size: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    font-family: var(--primary-font);
+}
+.card .card-body .detail{
+    justify-content: space-between;
+    margin: 2px 0 8px;
+}
+.card .card-body .detail p{
+    font-size: .5rem;
+    margin-right: 0rem;
+}
+.card .card-body .detail p i{
+    margin-right: .2rem;
+    font-size: .5rem;
+}
+.card label{
+    width: 100%;
+    /* left: 1%; */
+    height: 2.5px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0px;
+}
+/* .card label.a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2.5px;
+    background-color: orange;
+} */
+input[type='checkbox']:checked ~ label::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    animation: label-width 5s ease-in-out;
+    /* animation-fill-mode: forwards; */
+}
+@keyframes label-width {
+    from{
+        width: 0%;
+    } to {
+        width: 100%;
+    }
+}
+.cardActive{
+    transform: scale(1.2);
+}

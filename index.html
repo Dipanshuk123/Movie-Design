@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Movie_Page</title>
+</head>
+
+<body>
+    <!-- <div class="body"> -->
+    <!-- ========================= Navbar ========================= -->
+    <header>
+        <div class="container">
+            <nav class="navbar flex align-items space-between">
+                <h2 class="logo flex">Bunch<span>Movie</span></h2>
+                <ul class="flex align-items">
+                    <li class="click">Home</li>
+                    <li>Movies</li>
+                    <li>Series</li>
+                    <li>Watch Lists</li>
+                </ul>
+                <div class="admin flex align-items">
+                    <div class="headerInput">
+                        <input type="text" placeholder="Search Movie or Series">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- ========================= Navbar ========================= -->
+    <!-- ========================= Hero Section ========================= -->
+
+    <section class="hero-section">
+        <div class="container">
+            <h2 class="movieTitle">Jumanji</h2>
+            <div class="detail flex align-items">
+                <p><i class="far fa-clock"></i>1h 59min</p>
+                <p><i class="fas fa-calendar-week"></i>2017</p>
+                <p><i class="fas fa-star star"></i>6.9/10 IMDB Rating</p>
+            </div>
+            <p class="description">Four teenagers in detention discover an old video game console with a game they’ve never heard of. When they decide to play, they are immediately sucked into the jungle world of Jumanji in the bodies of their avatars (Dwayne Johnson, Jack Black, Kevin Hart, and Karen Gillan).</p>
+            <!-- <div class="btns flex align-items"> -->
+            <div class="btns">
+                <button class="trailer_btn">Watch Trailer<i class="fas fa-video"></i></button>
+            </div>
+        </div>
+        <p class="flex align-items watchList"><i class="far fa-plus-square"></i>Add To Watch list</p>
+    </section>
+
+    <!-- ========================= Hero Section ========================= -->
+    <section class="card-section">
+        <div class="container">
+            <div class="cards">
+                <!-- <i class="fas fa-angle-left"></i> -->
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/jumanji.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">Jumanji</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-1" >
+                    <label for="card-1" id='label-1' ></label>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/godzill.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">Godzilla</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-2" >
+                    <label for="card-2" id='label-2' ></label>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/the_baby_driver.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">Baby Driver</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-3">
+                    <label for="card-3" id='label-3' ></label>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/the_tomorrow_war.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">Tomorrow war</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-4">
+                    <label for="card-4" id='label-4' ></label>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/300.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">300</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-5">
+                    <label for="card-5" id='label-5' ></label>
+                </div>
+                <div class="card">
+                    <div class="img">
+                        <img src="./images/deadpool.jpg" alt="Movie_card">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="title">Deadpool</h4>
+                        <div class="detail space-between flex align-items">
+                            <p><i class="far fa-clock"></i>2h 2min</p>
+                            <p><i class="fas fa-calendar-week"></i>2019</p>
+                            <p><i class="fas fa-star star"></i>8.5/10</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="card-active" id="card-5">
+                    <label for="card-5" id='label-5' ></label>
+                </div>
+                <!-- <i class="fas fa-angle-right"></i> -->
+            </div>
+        </div>
+    </section>
+<!-- </div> -->
+
+    <script src="./main.js"></script>   
+</body>
+
+</html>
